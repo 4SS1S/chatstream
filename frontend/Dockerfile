@@ -15,19 +15,19 @@ COPY . .
 # Build the application
 RUN npm run build
 
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]
 
-# # Production stage
-# FROM nginx:alpine
+# Production stage
+FROM nginx:alpine
 
-# # Copy built application
-# COPY --from=build /app/build /usr/share/nginx/html
+# Copy built application
+COPY --from=build /app/build /usr/share/nginx/html
 
-# # Copy nginx configuration
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# # Expose port
-# EXPOSE 80
+# Expose port
+EXPOSE 80
 
-# # Start nginx
-# CMD ["nginx", "-g", "daemon off;"]
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
