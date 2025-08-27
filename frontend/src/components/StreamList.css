@@ -1,0 +1,141 @@
+.stream-list-container {
+  padding: 2rem;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.stream-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.stream-header h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.btn-create-stream {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-create-stream:hover {
+  background: #218838;
+}
+
+.no-streams {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.no-streams h2 {
+  color: #cccccc;
+  margin-bottom: 1rem;
+}
+
+.no-streams p {
+  color: #999999;
+}
+
+.streams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.stream-card {
+  background: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stream-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.stream-thumbnail {
+  position: relative;
+  height: 180px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.live-indicator {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #dc3545;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.viewer-count {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.stream-info {
+  padding: 1rem;
+}
+
+.stream-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.stream-streamer {
+  color: #007bff;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.stream-description {
+  color: #cccccc;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0 0 0.75rem 0;
+}
+
+.stream-meta {
+  color: #999999;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.btn-join-stream {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-join-stream:hover {
+  background: #0056b3;
+}
